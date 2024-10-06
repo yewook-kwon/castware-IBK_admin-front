@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    th {
+        position: relative;
+        padding-right: 15px; /* 공간 확보 */
+    }
+
+    th .resizer {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 5px;
+        cursor: col-resize;
+        user-select: none;
+        height: 100%;
+        background-color: transparent;
+    }
+    </style>
+</head>
+<body>
+    <table class="tbl_type01 resizable-table table table-hover" id="resizeMe">
+        <thead>
+            <tr>
+                <th class="draggable-table">
+                    <div class="check_wrap tbl">
+                        <input id="right01" type="checkbox" name="check">
+                        <label for="right01"></label>
+                    </div>
+                </th>
+                <th class="draggable-table">ID</th>
+                <th class="draggable-table">이름</th>
+                <th class="draggable-table">그룹</th>
+                <th class="draggable-table">지점명</th>
+                <th class="draggable-table">CPU</th>
+                <th class="draggable-table">MEM</th>
+                <th class="draggable-table">NET</th>
+                <th class="draggable-table">DISP.</th>
+                <th class="draggable-table">상태</th>
+                <th class="draggable-table">USB LOCK</th>
+                <th class="draggable-table">IP</th>
+                <th class="draggable-table">스토리보드 정보</th>
+                <th class="draggable-table">템플릿 수신일시</th>
+                <th class="draggable-table">수신기 시작시간</th>
+                <th class="draggable-table">수신기 버전</th>
+                <th class="draggable-table">스크린샷</th>
+                <th class="draggable-table">스크린샷 보기</th>
+                <th class="draggable-table">SSH 접속</th>
+                <th class="draggable-table">SFTP 접속</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="check_wrap tbl">
+                            <input id="right02" type="checkbox" name="check">
+                            <label for="right02"></label>
+                        </div>
+                    </td>
+                    <td>STB001</td>
+                    <td>수신기001</td>
+                    <td>영업점A그룹</td>
+                    <td>중곡동점</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>ON</td>
+                    <td>정상</td>
+                    <td>ON</td>
+                    <td>1.2.3.4</td>
+                    <td>STORY01</td>
+                    <td>20240508 00:30</td>
+                    <td>20240508 00:30</td>
+                    <td>V1.0.1</td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷 보기</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SSH 접속</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SFTP 접속</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="check_wrap tbl">
+                            <input id="right03" type="checkbox" name="check">
+                            <label for="right03"></label>
+                        </div>
+                    </td>
+                    <td>STB001</td>
+                    <td>수신기001</td>
+                    <td>영업점A그룹</td>
+                    <td>중곡동점</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>ON</td>
+                    <td>정상</td>
+                    <td>ON</td>
+                    <td>1.2.3.4</td>
+                    <td>STORY01</td>
+                    <td>20240508 00:30</td>
+                    <td>20240508 00:30</td>
+                    <td>V1.0.1</td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷 보기</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SSH 접속</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SFTP 접속</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="check_wrap tbl">
+                            <input id="right04" type="checkbox" name="check">
+                            <label for="right04"></label>
+                        </div>
+                    </td>
+                    <td>STB001</td>
+                    <td>수신기001</td>
+                    <td>영업점A그룹</td>
+                    <td>중곡동점</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>ON</td>
+                    <td>정상</td>
+                    <td>ON</td>
+                    <td>1.2.3.4</td>
+                    <td>STORY01</td>
+                    <td>20240508 00:30</td>
+                    <td>20240508 00:30</td>
+                    <td>V1.0.1</td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷 보기</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SSH 접속</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SFTP 접속</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="check_wrap tbl">
+                            <input id="right05" type="checkbox" name="check">
+                            <label for="right05"></label>
+                        </div>
+                    </td>
+                    <td>STB001</td>
+                    <td>수신기001</td>
+                    <td>영업점A그룹</td>
+                    <td>중곡동점</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>ON</td>
+                    <td>정상</td>
+                    <td>ON</td>
+                    <td>1.2.3.4</td>
+                    <td>STORY01</td>
+                    <td>20240508 00:30</td>
+                    <td>20240508 00:30</td>
+                    <td>V1.0.1</td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷 보기</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SSH 접속</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SFTP 접속</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="check_wrap tbl">
+                            <input id="right06" type="checkbox" name="check">
+                            <label for="right06"></label>
+                        </div>
+                    </td>
+                    <td>STB001</td>
+                    <td>수신기001</td>
+                    <td>영업점A그룹</td>
+                    <td>중곡동점</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>ON</td>
+                    <td>정상</td>
+                    <td>ON</td>
+                    <td>1.2.3.4</td>
+                    <td>STORY01</td>
+                    <td>20240508 00:30</td>
+                    <td>20240508 00:30</td>
+                    <td>V1.0.1</td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷 보기</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SSH 접속</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SFTP 접속</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="check_wrap tbl">
+                            <input id="right07" type="checkbox" name="check">
+                            <label for="right07"></label>
+                        </div>
+                    </td>
+                    <td>STB001</td>
+                    <td>수신기001</td>
+                    <td>영업점A그룹</td>
+                    <td>중곡동점</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>ON</td>
+                    <td>정상</td>
+                    <td>ON</td>
+                    <td>1.2.3.4</td>
+                    <td>STORY01</td>
+                    <td>20240508 00:30</td>
+                    <td>20240508 00:30</td>
+                    <td>V1.0.1</td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷 보기</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SSH 접속</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SFTP 접속</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="check_wrap tbl">
+                            <input id="right08" type="checkbox" name="check">
+                            <label for="right08"></label>
+                        </div>
+                    </td>
+                    <td>STB001</td>
+                    <td>수신기001</td>
+                    <td>영업점A그룹</td>
+                    <td>중곡동점</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>ON</td>
+                    <td>정상</td>
+                    <td>ON</td>
+                    <td>1.2.3.4</td>
+                    <td>STORY01</td>
+                    <td>20240508 00:30</td>
+                    <td>20240508 00:30</td>
+                    <td>V1.0.1</td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷 보기</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SSH 접속</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SFTP 접속</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="check_wrap tbl">
+                            <input id="right09" type="checkbox" name="check">
+                            <label for="right09"></label>
+                        </div>
+                    </td>
+                    <td>STB001</td>
+                    <td>수신기001</td>
+                    <td>영업점A그룹</td>
+                    <td>중곡동점</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>ON</td>
+                    <td>정상</td>
+                    <td>ON</td>
+                    <td>1.2.3.4</td>
+                    <td>STORY01</td>
+                    <td>20240508 00:30</td>
+                    <td>20240508 00:30</td>
+                    <td>V1.0.1</td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷 보기</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SSH 접속</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SFTP 접속</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="check_wrap tbl">
+                            <input id="right10" type="checkbox" name="check">
+                            <label for="right10"></label>
+                        </div>
+                    </td>
+                    <td>STB001</td>
+                    <td>수신기001</td>
+                    <td>영업점A그룹</td>
+                    <td>중곡동점</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>30%</td>
+                    <td>ON</td>
+                    <td>정상</td>
+                    <td>ON</td>
+                    <td>1.2.3.4</td>
+                    <td>STORY01</td>
+                    <td>20240508 00:30</td>
+                    <td>20240508 00:30</td>
+                    <td>V1.0.1</td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">스크린샷 보기</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SSH 접속</button>
+                    </td>
+                    <td>
+                        <button type="button" class="tbl_btn">SFTP 접속</button>
+                    </td>
+                </tr>
+            </tbody>
+        </tbody>
+    </table>
+    <script>
+        document.querySelectorAll('th').forEach(function (th) {
+            const resizer = document.createElement('div');
+            resizer.classList.add('resizer');
+            th.appendChild(resizer);
+            
+            let startX, startWidth;
+            
+            resizer.addEventListener('mousedown', function (e) {
+                startX = e.pageX;
+                startWidth = th.offsetWidth;
+                
+                document.addEventListener('mousemove', resizeColumn);
+                document.addEventListener('mouseup', stopResize);
+            });
+    
+            function resizeColumn(e) {
+                const newWidth = startWidth + (e.pageX - startX);
+                th.style.width = `${newWidth}px`;
+            }
+    
+            function stopResize() {
+                document.removeEventListener('mousemove', resizeColumn);
+                document.removeEventListener('mouseup', stopResize);
+            }
+        });
+    </script>
+</body>
+</html>

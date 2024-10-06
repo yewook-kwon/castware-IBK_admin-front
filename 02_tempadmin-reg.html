@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-템플릿 관리-등록</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div id="wrap2">
+        <header id="header">
+            <span class="admin">관리자01</span>
+        </header>
+        <div class="cont_main">
+            <div class="tabs">
+                <ul class="nav">
+                    <li data-tab="tab1">
+                        <span>대시보드</span>
+                        <img src="./img/menu_ico01_active.png">
+                    </li>
+                    <li data-tab="tab2" class="active">
+                        <span>템플릿 관리</span><img src="./img/menu_ico02_active.png">
+                    </li>
+                    <li data-tab="tab3">
+                        <span>스토리보드 관리</span><img src="./img/menu_ico03.png">
+                    </li>
+                    <li data-tab="tab4">
+                        <span>수신기 관리</span><img src="./img/menu_ico04.png">
+                    </li>
+                    <li data-tab="tab5">
+                        <span>지점관리</span><img src="./img/menu_ico05.png">
+                    </li>
+                    <li data-tab="tab6">
+                        <span>그룹 관리</span><img src="./img/menu_ico06.png">
+                    </li>
+                    <li data-tab="tab7">
+                        <span>운영관리</span><img src="./img/menu_ico07.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="containers">
+
+                <div id="tab2" class="box_wrap tab-content active">
+                    <div class="box_right box relative">
+                        <ul class="list_wrap">
+                            <li>
+                                <h4 class="li_list">ID</h4>
+                                <span>TEMP001</span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">템플릿 파일</h4>
+                                <span class="form-file">템플릿을 등록해 주세요</span>
+                                <div class="ml-6 flex items-center">
+                                    <div class="filebox">
+                                        <input id="file" type="file" class="temp_btn">
+                                        <label for="file">템플릿 등록</label>
+
+                                    </div>
+
+                                    <button class="temp_btn view">미리보기</button>
+                                </div>
+
+                            </li>
+                            <li>
+                                <h4 class="li_list">이름</h4>
+                                <span><input type="text" value="4개국 환율 강조 파란색"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">타입</h4>
+                                <span>
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box">고정형</span>
+                                        <ul class="sel_list" style="display: none;">
+                                            <li>고정형</li>
+                                            <li>이동형</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">버전</h4>
+                                <span>TEMP001</span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">재생시간</h4>
+                                <span><input type="text" value=""></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">사용여부</h4>
+                                <span>
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box">사용</span>
+                                        <ul class="sel_list" style="display: none;">
+                                            <li>사용</li>
+                                            <li>미사용</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </li>
+                        </ul>
+
+                        <div class="flex gap-2 justify-center bottom_btn_wrap">
+                            <button class="bottom_btn">취소</button>
+                            <button class="bottom_btn edit">수정</button>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/core.js"></script>
+
+</body>
+
+</html>

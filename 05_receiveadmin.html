@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-수신기관리</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div id="wrap2">
+
+        <header id="header">
+            <span class="admin">관리자01</span>
+        </header>
+        <div class="cont_main">
+            <div class="tabs">
+                <ul class="nav">
+                    <li data-tab="tab1">
+                        <span>대시보드</span>
+                        <img src="./img/menu_ico01_active.png">
+                    </li>
+                    <li data-tab="tab2">
+                        <span>템플릿 관리</span><img src="./img/menu_ico02.png">
+                    </li>
+                    <li data-tab="tab3" class="">
+                        <span>스토리보드 관리</span><img src="./img/menu_ico03.png">
+                    </li>
+                    <li data-tab="tab4" class="active">
+                        <span>수신기 관리</span><img src="./img/menu_ico04_active.png">
+                    </li>
+                    <li data-tab="tab5">
+                        <span>지점관리</span><img src="./img/menu_ico05.png">
+                    </li>
+                    <li data-tab="tab6">
+                        <span>그룹 관리</span><img src="./img/menu_ico06.png">
+                    </li>
+                    <li data-tab="tab7">
+                        <span>운영관리</span><img src="./img/menu_ico07.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="containers">               
+                
+                <div id="tab4" class="box_wrap tab-content active">
+                    <div class="box_right box">
+
+                        <form class="search_wrap">
+                            <ul>
+                                <li>
+                                    <span>상태</span>
+
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box">전체</span>
+                                        <ul class="sel_list" style="display: none;">
+                                            <li>전체</li>
+                                            <li>정상</li>
+                                            <li>비정상</li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <span>검색</span>
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box">전체</span>
+                                        <ul class="sel_list" style="display: none;">
+                                            <li>전체</li>
+                                            <li>ID</li>
+                                            <li>이름</li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <input class="search_input" type="search" placeholder="검색어를 입력해주세요">
+                                    <button type="submit" class="search_btn">검색</button>
+                                    <button type="submit" class="search_btn search_btn_ec"><img src="./img/btn_ec.png">
+                                        EXCEL</button>
+                                </li>
+                            </ul>
+                        </form>
+
+                        <div class="table-reposive temp_layout">
+                            <table class="tbl_type01">
+                                <thead>
+                                    <tr>
+                                        <th>선택</th>
+                                        <th>ID</th>
+                                        <th>이름</th>
+                                        <th>그룹</th>
+                                        <th>지점명</th>
+                                        <th>상태</th>
+                                        <th>USB LOCK</th>
+                                        <th>IP</th>
+                                        <th>수신기 시작시간</th>
+                                        <th>수신기 버전</th>
+                                        <th>수정</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right12" type="checkbox" name="check">
+                                                <label for="right12"></label>
+                                            </div>
+                                        </td>
+                                        <td>STB001</td>
+                                        <td>수신기001</td>
+                                        <td>영업점A그룹</td>
+                                        <td>중곡동점</td>
+                                        <td>정상</td>
+                                        <td>ON</td>
+                                        <td>1.2.3.4</td>
+                                        <td>20240508 00:30</td>
+                                        <td>202406190200</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">수정</button>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right12" type="checkbox" name="check">
+                                                <label for="right12"></label>
+                                            </div>
+                                        </td>
+                                        <td>STB001</td>
+                                        <td>수신기001</td>
+                                        <td>영업점A그룹</td>
+                                        <td>중곡동점</td>
+                                        <td>정상</td>
+                                        <td>ON</td>
+                                        <td>1.2.3.4</td>
+                                        <td>20240508 00:30</td>
+                                        <td>202406190200</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">수정</button>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right12" type="checkbox" name="check">
+                                                <label for="right12"></label>
+                                            </div>
+                                        </td>
+                                        <td>STB001</td>
+                                        <td>수신기001</td>
+                                        <td>영업점A그룹</td>
+                                        <td>중곡동점</td>
+                                        <td>정상</td>
+                                        <td>ON</td>
+                                        <td>1.2.3.4</td>
+                                        <td>20240508 00:30</td>
+                                        <td>202406190200</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">수정</button>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right12" type="checkbox" name="check">
+                                                <label for="right12"></label>
+                                            </div>
+                                        </td>
+                                        <td>STB001</td>
+                                        <td>수신기001</td>
+                                        <td>영업점A그룹</td>
+                                        <td>중곡동점</td>
+                                        <td>정상</td>
+                                        <td>ON</td>
+                                        <td>1.2.3.4</td>
+                                        <td>20240508 00:30</td>
+                                        <td>202406190200</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">수정</button>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right12" type="checkbox" name="check">
+                                                <label for="right12"></label>
+                                            </div>
+                                        </td>
+                                        <td>STB001</td>
+                                        <td>수신기001</td>
+                                        <td>영업점A그룹</td>
+                                        <td>중곡동점</td>
+                                        <td>정상</td>
+                                        <td>ON</td>
+                                        <td>1.2.3.4</td>
+                                        <td>20240508 00:30</td>
+                                        <td>202406190200</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">수정</button>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right12" type="checkbox" name="check">
+                                                <label for="right12"></label>
+                                            </div>
+                                        </td>
+                                        <td>STB001</td>
+                                        <td>수신기001</td>
+                                        <td>영업점A그룹</td>
+                                        <td>중곡동점</td>
+                                        <td>정상</td>
+                                        <td>ON</td>
+                                        <td>1.2.3.4</td>
+                                        <td>20240508 00:30</td>
+                                        <td>202406190200</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">수정</button>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right12" type="checkbox" name="check">
+                                                <label for="right12"></label>
+                                            </div>
+                                        </td>
+                                        <td>STB001</td>
+                                        <td>수신기001</td>
+                                        <td>영업점A그룹</td>
+                                        <td>중곡동점</td>
+                                        <td>정상</td>
+                                        <td>ON</td>
+                                        <td>1.2.3.4</td>
+                                        <td>20240508 00:30</td>
+                                        <td>202406190200</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">수정</button>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right12" type="checkbox" name="check">
+                                                <label for="right12"></label>
+                                            </div>
+                                        </td>
+                                        <td>STB001</td>
+                                        <td>수신기001</td>
+                                        <td>영업점A그룹</td>
+                                        <td>중곡동점</td>
+                                        <td>정상</td>
+                                        <td>ON</td>
+                                        <td>1.2.3.4</td>
+                                        <td>20240508 00:30</td>
+                                        <td>202406190200</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">수정</button>
+                                        </td>                                        
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right12" type="checkbox" name="check">
+                                                <label for="right12"></label>
+                                            </div>
+                                        </td>
+                                        <td>STB001</td>
+                                        <td>수신기001</td>
+                                        <td>영업점A그룹</td>
+                                        <td>중곡동점</td>
+                                        <td>정상</td>
+                                        <td>ON</td>
+                                        <td>1.2.3.4</td>
+                                        <td>20240508 00:30</td>
+                                        <td>202406190200</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">수정</button>
+                                        </td>                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                        <div class="btn_wrap mt-6 justify-between">
+                            <button class="del_btn">삭제</button>
+
+                            <ul class="page-navigation">
+                                <li><a href="#">
+                                        <img src="./img/left2_ico.png">
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        <img src="./img/left_ico.png">
+                                    </a>
+                                </li>
+                                <li><a href="#" class="active">
+                                        1
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        2
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        3
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        4
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        5
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        <img src="./img/right_ico.png">
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        <img src="./img/right2_ico.png">
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <button class="reg_btn">
+                                <a href="#" target="_blank">수신기 등록</a>
+
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/core.js"></script>
+    <script>
+        $(document).ready(function () {
+            // up 버튼 클릭 이벤트
+            $('.temp_list').on('click', '.btn_up', function () {
+                var $current = $(this).closest('li');
+                var $prev = $current.prev();
+                if ($prev.length !== 0) {
+                    $current.insertBefore($prev);
+                }
+            });
+
+            // down 버튼 클릭 이벤트
+            $('.temp_list').on('click', '.btn_down', function () {
+                var $current = $(this).closest('li');
+                var $next = $current.next();
+                if ($next.length !== 0) {
+                    $current.insertAfter($next);
+                }
+            });
+
+            // delete 버튼 클릭 이벤트
+            $('.temp_list').on('click', '.btn_del', function () {
+                $(this).closest('li').remove();
+            });
+
+            // add 버튼 클릭 이벤트
+            $('.bottom_btn.add').click(function () {
+                var newItem = `
+                    <li>
+                        <div class="temp_row_wrap">
+                            <input type="text" class="input_list" placeholder="템플릿 이름을 입력해 주세요">
+                            <input type="text" class="input_time" value="30">
+                            <button type="button" class="btn_up"><img src="./img/temp_up.png" alt="위"></button>
+                            <button type="button" class="btn_down"><img src="./img/temp_down.png" alt="아래"></button>
+                            <button type="button" class="btn_del"><img src="./img/temp_close.png" alt="삭제"></button>
+                        </div>
+                    </li>`;
+                $('.temp_list').append(newItem);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

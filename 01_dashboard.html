@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-대시보드</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div id="wrap2">
+
+        <header id="header">
+            <span class="admin">관리자01</span>
+        </header>
+        <div class="cont_main">
+            <div class="tabs">
+
+                <ul class="nav">
+                    <li data-tab="tab1" class="active">
+                        <span>대시보드</span>
+                        <img src="./img/menu_ico01_active.png">
+                    </li>
+                    <li data-tab="tab2">
+                        <span>템플릿 관리</span><img src="./img/menu_ico02.png">
+                    </li>
+                    <li data-tab="tab3">
+                        <span>스토리보드 관리</span><img src="./img/menu_ico03.png">
+                    </li>
+                    <li data-tab="tab4">
+                        <span>수신기 관리</span><img src="./img/menu_ico04.png">
+                    </li>
+                    <li data-tab="tab5">
+                        <span>지점관리</span><img src="./img/menu_ico05.png">
+                    </li>
+                    <li data-tab="tab6">
+                        <span>그룹 관리</span><img src="./img/menu_ico06.png">
+                    </li>
+                    <li data-tab="tab7">
+                        <span>운영관리</span><img src="./img/menu_ico07.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="containers">
+                <div id="tab1" class="box_wrap tab-content active">
+                    <form class="box_left box">
+                        <ul class="box_top_check">
+                            <li>
+                                <img src="./img/ref_ico.png" /><span>그룹유형</span>
+                            </li>
+                            <li>
+                                <div class="check_wrap">
+                                    <input id="01" type="checkbox" name="group">
+                                    <label for="01">
+                                        <span>본부</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="check_wrap">
+                                    <input id="02" type="checkbox" name="group">
+                                    <label for="02">
+                                        <span>권역</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="check_wrap">
+                                    <input id="03" type="checkbox" name="group">
+                                    <label for="03">
+                                        <span>편성그룹</span>
+                                    </label>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="table-reposive">
+                            <table class="tbl_type01 resizable-table table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th data-index="0" class="str">권역</th>
+                                        <th data-index="1" class="num">TOTAL</th>
+                                        <th data-index="2" class="num">정상</th>
+                                        <th data-index="3" class="num">경고</th>
+                                        <th data-index="4" class="num">장애</th>
+                                        <th data-index="5" class="num">작업</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="txt">서울권역</td>
+                                        <td class="txt">100</td>
+                                        <td class="txt">1</td>
+                                        <td class="txt">2</td>
+                                        <td class="txt">3</td>
+                                        <td class="txt">5</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt">경기권역</td>
+                                        <td class="txt">123</td>
+                                        <td class="txt">5</td>
+                                        <td class="txt">4</td>
+                                        <td class="txt">3</td>
+                                        <td class="txt">2</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="txt">강원권역</td>
+                                        <td class="txt">4</td>
+                                        <td class="txt">9</td>
+                                        <td class="txt">7</td>
+                                        <td class="txt">1</td>
+                                        <td class="txt">3</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </form>
+                    <div class="box_right box relative">
+                        <ul class="btn_link">
+                            <input type="checkbox" id="toggle" hidden>
+                            <label for="toggle" class="toggleSwitch">
+                                <span class="toggleButton"></span>
+                            </label>
+                            <li>
+                                <a href="#">USB LOCK<img src="./img/link_ico.png" alt="링크"></a>
+                            </li>
+                            <li>
+                                <a href="#">USB UNLOCK<img src="./img/link_ico.png" alt="링크"></a>
+                            </li>
+                            <li>
+                                <a href="#">REBOOT<img src="./img/link_ico.png" alt="링크"></a>
+                            </li>
+                            <li>
+                                <a href="#">DISP. ON<img src="./img/link_ico.png" alt="링크"></a>
+                            </li>
+                            <li>
+                                <a href="#">DISP. OFF<img src="./img/link_ico.png" alt="링크"></a>
+                            </li>
+                        </ul>
+                        <form class="search_wrap">
+                            <ul>
+                                <li>
+                                    <span>상태</span>
+
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box">전체</span>
+                                        <ul class="sel_list">
+                                            <li>전체</li>
+                                            <li>정상</li>
+                                            <li>경고</li>
+                                            <li>장애</li>
+                                            <li>작업</li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <span>검색</span>
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box">전체</span>
+                                        <ul class="sel_list">
+                                            <li>전체</li>
+                                            <li>수신기 IP</li>
+                                            <li>지점명</li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <input class="search_input" type="search" placeholder="검색어를 입력해주세요">
+                                    <button type="submit" class="search_btn">검색</button>
+                                    <button type="submit" class="search_btn search_btn_ec"><img src="./img/btn_ec.png">
+                                        EXCEL</button>
+                                </li>
+                            </ul>
+                        </form>
+
+                        <div class="table-reposive right">
+                            <table class="tbl_type01 resizable-table table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="check_wrap tbl">
+                                                <input id="right01" type="checkbox" name="check">
+                                                <label for="right01"></label>
+                                            </div>
+                                        </th>
+                                        <th data-index="1" class="str">ID</th>
+                                        <th data-index="2" class="str">이름</th>
+                                        <th data-index="3" class="str">그룹</th>
+                                        <th data-index="4" class="str">지점명</th>
+                                        <th data-index="5" class="num">CPU</th>
+                                        <th data-index="6" class="num">MEM</th>
+                                        <th data-index="7" class="num">NET</th>
+                                        <th data-index="8" class="str">DISP.</th>
+                                        <th data-index="9" class="str">상태</th>
+                                        <th data-index="10" class="str">USB LOCK</th>
+                                        <th data-index="11" class="num">IP</th>
+                                        <th data-index="12" class="str">스토리보드 정보</th>
+                                        <th data-index="13" class="num">템플릿 수신일시</th>
+                                        <th data-index="14" class="num">수신기 시작시간</th>
+                                        <th data-index="15" class="num">수신기 버전</th>
+                                        <th>스크린샷</th>
+                                        <th>스크린샷 보기</th>
+                                        <th>SSH 접속</th>
+                                        <th>SFTP 접속</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right02" type="checkbox" name="check">
+                                                <label for="right02"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txt">111</td>
+                                        <td class="txt">가나다</td>
+                                        <td class="txt">영업점B그룹</td>
+                                        <td class="txt">중곡동점</td>
+                                        <td class="txt">1%</td>
+                                        <td class="txt">30%</td>
+                                        <td class="txt">30%</td>
+                                        <td class="txt">ON</td>
+                                        <td class="txt">정상</td>
+                                        <td class="txt">ON</td>
+                                        <td class="txt">1.2.3.4</td>
+                                        <td class="txt">STORY01</td>
+                                        <td class="txt">20240508 00:30</td>
+                                        <td class="txt">20240508 00:30</td>
+                                        <td class="txt">V1.0.1</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">스크린샷</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">스크린샷 보기</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">SSH 접속</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">SFTP 접속</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right03" type="checkbox" name="check">
+                                                <label for="right03"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txt">222</td>
+                                        <td class="txt">신기신기00221</td>
+                                        <td class="txt">영업점C그룹</td>
+                                        <td class="txt">중곡동점</td>
+                                        <td class="txt">20%</td>
+                                        <td class="txt">30%</td>
+                                        <td class="txt">30%</td>
+                                        <td class="txt">ON</td>
+                                        <td class="txt">정상</td>
+                                        <td class="txt">ON</td>
+                                        <td class="txt">1.2.3.4</td>
+                                        <td class="txt">STORY01</td>
+                                        <td class="txt">20240508 00:30</td>
+                                        <td class="txt">20240508 00:30</td>
+                                        <td class="txt">V1.0.1</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">스크린샷</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">스크린샷 보기</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">SSH 접속</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">SFTP 접속</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="right04" type="checkbox" name="check">
+                                                <label for="right04"></label>
+                                            </div>
+                                        </td>
+                                        <td class="txt">333</td>
+                                        <td class="txt">라라</td>
+                                        <td class="txt">영업점A그룹</td>
+                                        <td class="txt">중곡동점</td>
+                                        <td class="txt">30%</td>
+                                        <td class="txt">30%</td>
+                                        <td class="txt">30%</td>
+                                        <td class="txt">ON</td>
+                                        <td class="txt">정상</td>
+                                        <td class="txt">ON</td>
+                                        <td class="txt">1.2.3.4</td>
+                                        <td class="txt">STORY01</td>
+                                        <td class="txt">20240508 00:30</td>
+                                        <td class="txt">20240508 00:30</td>
+                                        <td class="txt">V1.0.1</td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">스크린샷</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">스크린샷 보기</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">SSH 접속</button>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="tbl_btn">SFTP 접속</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                </tbody>
+                            </table>
+                            
+
+
+                        </div>
+
+                        <div class="btn_wrap mt-6 justify-center">
+                            <ul class="page-navigation">
+                                <li><a href="#">
+                                        <img src="./img/left2_ico.png">
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        <img src="./img/left_ico.png">
+                                    </a>
+                                </li>
+                                <li><a href="#" class="active">
+                                        1
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        2
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        3
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        4
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        5
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        <img src="./img/right_ico.png">
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        <img src="./img/right2_ico.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/core.js"></script>
+
+</body>
+
+</html>

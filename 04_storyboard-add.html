@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-스토리보드관리-템플릿추가</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div id="wrap2">
+
+        <header id="header">
+            <span class="admin">관리자01</span>
+        </header>
+        <div class="cont_main">
+            <div class="tabs">
+                <ul class="nav">
+                    <li data-tab="tab1">
+                        <span>대시보드</span>
+                        <img src="./img/menu_ico01_active.png">
+                    </li>
+                    <li data-tab="tab2">
+                        <span>템플릿 관리</span><img src="./img/menu_ico02.png">
+                    </li>
+                    <li data-tab="tab3" class="active">
+                        <span>스토리보드 관리</span><img src="./img/menu_ico03_active.png">
+                    </li>
+                    <li data-tab="tab4">
+                        <span>수신기 관리</span><img src="./img/menu_ico04.png">
+                    </li>
+                    <li data-tab="tab5">
+                        <span>지점관리</span><img src="./img/menu_ico05.png">
+                    </li>
+                    <li data-tab="tab6">
+                        <span>그룹 관리</span><img src="./img/menu_ico06.png">
+                    </li>
+                    <li data-tab="tab7">
+                        <span>운영관리</span><img src="./img/menu_ico07.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="containers">
+                <div id="tab3" class="box_wrap tab-content">
+                    <div class="box_right box">
+                        <ul class="list_wrap relative">
+                            <li>
+                                <h4 class="li_list">ID</h4>
+                                <span>TEMP001</span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">템플릿 파일</h4>
+                                <span class="">Template001v10.tar</span>
+                                <div class="ml-6 flex items-center">
+                                    <div class="filebox">
+                                        <input id="file" type="file" class="temp_btn">
+                                        <label for="file">템플릿 등록</label>
+                                    </div>
+
+                                    <button class="temp_btn view">미리보기</button>
+                                </div>
+
+                            </li>
+                            <li>
+                                <h4 class="li_list">이름</h4>
+                                <span><input type="text" value="4개국 환율 강조 파란색"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">타입</h4>
+                                <span>
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box">고정형</span>
+                                        <ul class="sel_list" style="display: none;">
+                                            <li>고정형</li>
+                                            <li>이동형</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">버전</h4>
+                                <span>TEMP001</span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">재생시간</h4>
+                                <span><input type="text" value=""></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">사용여부</h4>
+                                <span>
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box">사용</span>
+                                        <ul class="sel_list" style="display: none;">
+                                            <li>사용</li>
+                                            <li>미사용</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </li>
+
+                            <div class="flex gap-2 justify-center bottom_btn_wrap">
+                                <button class="bottm_btn">취소</button>
+                                <button class="bottm_btn edit">수정</button>
+                            </div>
+                        </ul>
+
+
+
+                    </div>
+                </div>
+                <div id="tab3" class="box_wrap tab-content active">
+
+                    <div class="box_right box">
+                        <div class="flex justify-between">
+                            <h3 class="cont_tit">템플릿 추가</h3>
+                            <form class="search_wrap">
+                                <ul>
+                                    <li>
+                                        <span>타입</span>
+                                        <div class="sel_box_wrap">
+                                            <span class="sel_box">전체</span>
+                                            <ul class="sel_list" style="display: none;">
+                                                <li>전체</li>
+                                                <li>ID</li>
+                                                <li>이름</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <input class="search_input" type="search" placeholder="검색어를 입력해주세요">
+                                        <button type="submit" class="search_btn">검색</button>
+                                        <!-- <button type="submit" class="search_btn search_btn_ec"><img src="./img/btn_ec.png">
+                                            EXCEL</button> -->
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+
+
+                        <div class="table-reposive temp_layout">
+                            <table class="tbl_type01">
+                                <thead>
+                                    <tr>
+                                        <th>선택</th>
+                                        <th>ID</th>
+                                        <th>이름</th>
+                                        <th>타입</th>
+                                        <th>버전</th>
+                                        <th>사용여부</th>
+                                        <th>미리보기</th>
+                                        <th>등록일자</th>
+                                        <th>재생시간</th>
+                                        <th>추가</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="1" type="checkbox" name="check">
+                                                <label for="1"></label>
+                                            </div>
+                                        </td>
+                                        <td>STORY01</td>
+                                        <td>영업점 기본 스토리보드</td>
+                                        <td>사용</td>
+                                        <td>v1.0</td>
+                                        <td>사용</td>
+                                        <td><button><img src="./img/play_ico.png" /></button></td>
+                                        <td>20240507 16:10</td>
+                                        <td>00:30</td>
+                                        <td><button type="button" class="tbl_btn">추가</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="2" type="checkbox" name="check">
+                                                <label for="2"></label>
+                                            </div>
+                                        </td>
+                                        <td>STORY01</td>
+                                        <td>영업점 기본 스토리보드</td>
+                                        <td>사용</td>
+                                        <td>v1.0</td>
+                                        <td>사용</td>
+                                        <td><button><img src="./img/play_ico.png" /></button></td>
+                                        <td>20240507 16:10</td>
+                                        <td>00:30</td>
+                                        <td><button type="button" class="tbl_btn">추가</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="3" type="checkbox" name="check">
+                                                <label for="3"></label>
+                                            </div>
+                                        </td>
+                                        <td>STORY01</td>
+                                        <td>영업점 기본 스토리보드</td>
+                                        <td>사용</td>
+                                        <td>v1.0</td>
+                                        <td>사용</td>
+                                        <td><button><img src="./img/play_ico.png" /></button></td>
+                                        <td>20240507 16:10</td>
+                                        <td>00:30</td>
+                                        <td><button type="button" class="tbl_btn">추가</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="4" type="checkbox" name="check">
+                                                <label for="4"></label>
+                                            </div>
+                                        </td>
+                                        <td>STORY01</td>
+                                        <td>영업점 기본 스토리보드</td>
+                                        <td>사용</td>
+                                        <td>v1.0</td>
+                                        <td>사용</td>
+                                        <td><button><img src="./img/play_ico.png" /></button></td>
+                                        <td>20240507 16:10</td>
+                                        <td>00:30</td>
+                                        <td><button type="button" class="tbl_btn">추가</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="5" type="checkbox" name="check">
+                                                <label for="5"></label>
+                                            </div>
+                                        </td>
+                                        <td>STORY01</td>
+                                        <td>영업점 기본 스토리보드</td>
+                                        <td>사용</td>
+                                        <td>v1.0</td>
+                                        <td>사용</td>
+                                        <td><button><img src="./img/play_ico.png" /></button></td>
+                                        <td>20240507 16:10</td>
+                                        <td>00:30</td>
+                                        <td><button type="button" class="tbl_btn">추가</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="6" type="checkbox" name="check">
+                                                <label for="6"></label>
+                                            </div>
+                                        </td>
+                                        <td>STORY01</td>
+                                        <td>영업점 기본 스토리보드</td>
+                                        <td>사용</td>
+                                        <td>v1.0</td>
+                                        <td>사용</td>
+                                        <td><button><img src="./img/play_ico.png" /></button></td>
+                                        <td>20240507 16:10</td>
+                                        <td>00:30</td>
+                                        <td><button type="button" class="tbl_btn">추가</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="7" type="checkbox" name="check">
+                                                <label for="7"></label>
+                                            </div>
+                                        </td>
+                                        <td>STORY01</td>
+                                        <td>영업점 기본 스토리보드</td>
+                                        <td>사용</td>
+                                        <td>v1.0</td>
+                                        <td>사용</td>
+                                        <td><button><img src="./img/play_ico.png" /></button></td>
+                                        <td>20240507 16:10</td>
+                                        <td>00:30</td>
+                                        <td><button type="button" class="tbl_btn">추가</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="check_wrap tbl">
+                                                <input id="8" type="checkbox" name="check">
+                                                <label for="8"></label>
+                                            </div>
+                                        </td>
+                                        <td>STORY01</td>
+                                        <td>영업점 기본 스토리보드</td>
+                                        <td>사용</td>
+                                        <td>v1.0</td>
+                                        <td>사용</td>
+                                        <td><button><img src="./img/play_ico.png" /></button></td>
+                                        <td>20240507 16:10</td>
+                                        <td>00:30</td>
+                                        <td><button type="button" class="tbl_btn">추가</button></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        
+                        <div class="btn_wrap mt-6 justify-between">
+                            
+                            <button class="del_btn">취소</button>
+                            <ul class="page-navigation">
+                                <li><a href="#">
+                                        <img src="./img/left2_ico.png">
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        <img src="./img/left_ico.png">
+                                    </a>
+                                </li>
+                                <li><a href="#" class="active">
+                                        1
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        2
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        3
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        4
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        5
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        <img src="./img/right_ico.png">
+                                    </a>
+                                </li>
+                                <li><a href="#">
+                                        <img src="./img/right2_ico.png">
+                                    </a>
+                                </li>
+                            </ul>
+                            <div></div>
+                            <!-- <button class="reg_btn">
+                                <a href="04_storyboard_reg.html" target="_blank">스토리보드 등록</a>
+
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/core.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-지점관리-지점등록</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div id="wrap2">
+
+        <header id="header">
+            <span class="admin">관리자01</span>
+        </header>
+        <div class="cont_main">
+            <div class="tabs">
+                <ul class="nav">
+                    <li data-tab="tab1" >
+                        <span>대시보드</span>
+                        <img src="./img/menu_ico01_active.png">
+                    </li>
+                    <li data-tab="tab2" >
+                        <span>템플릿 관리</span><img src="./img/menu_ico02.png">
+                    </li>
+                    <li data-tab="tab3">
+                        <span>스토리보드 관리</span><img src="./img/menu_ico03.png">
+                    </li>
+                    <li data-tab="tab4">
+                        <span>수신기 관리</span><img src="./img/menu_ico04.png">
+                    </li>
+                    <li data-tab="tab5" class="active">
+                        <span>지점관리</span><img src="./img/menu_ico05_active.png">
+                    </li>
+                    <li data-tab="tab6">
+                        <span>그룹 관리</span><img src="./img/menu_ico06.png">
+                    </li>
+                    <li data-tab="tab7">
+                        <span>운영관리</span><img src="./img/menu_ico07.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="containers">
+                
+                <div id="tab5" class="box_wrap tab-content active">
+                    <div class="box_right box relative">
+                        <ul class="list_wrap">
+                            <li>
+                                <h4 class="li_list">ID</h4>
+                                <span>BRANCH001</span>
+                            </li>
+                            
+                            <li>
+                                <h4 class="li_list">이름</h4>
+                                <span><input type="text" value="중곡동점"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">권역</h4>
+                                <span>
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box lg">서울권역</span>
+                                        <ul class="sel_list" style="display: none;">
+                                            <li>서울권역</li>
+                                            <li>경기권역</li>
+                                            <li>강원권역</li>
+                                            <li>충청권역</li>
+                                            <li>전라권역</li>
+                                            <li>경상권역</li>
+                                            <li>부산권역</li>
+                                            <li>제주권역</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">본부</h4>
+                                <span>
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box lg">강동지역본부</span>
+                                        <ul class="sel_list" style="display: none;">
+                                            <li>서울지역본부</li>
+                                            <li>경기지역본부</li>
+                                            <li>강원지역본부</li>
+                                            <li>충청지역본부</li>
+                                            <li>전라지역본부</li>
+                                            <li>경상지역본부</li>
+                                            <li>부산지역본부</li>
+                                            <li>제주지역본부</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">주소</h4>
+                                <span><input type="text" value="서울 광진 중곡동"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">전화번호</h4>
+                                <span><input type="text" value="서울 광진 중곡동"></span>
+                            </li>
+                            
+                            <li>
+                                <h4 class="li_list">상태</h4>
+                                <span>
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box">사용</span>
+                                        <ul class="sel_list" style="display: none;">
+                                            <li>사용</li>
+                                            <li>미사용</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </li>                            
+                        </ul>
+                        
+                        <div class="flex gap-2 justify-center bottom_btn_wrap">
+                            <button class="bottom_btn">취소</button>
+                            <button class="bottom_btn edit">저장</button>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/core.js"></script>
+
+</body>
+
+</html>

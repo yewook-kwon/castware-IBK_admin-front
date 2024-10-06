@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-운영관리-휴일관리</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <div id="wrap2">
+        <div class="black-bg">
+            <div class="layerpop_wrap">
+                <div class="layer-body">
+                    <p>
+                        기존 스토리보드 선택 정보를<br>
+                        <span class="point">현재 선택 그룹 정보로 변경</span>하시겠습니까?
+                    </p>
+                </div>
+                <div class="layer-btn">
+                    <button class="btn-cancle btn">취소</button>
+                    <button class="btn-primary btn">확인</button>
+                </div>
+            </div>
+        </div>
+        <header id="header">
+            <span class="admin">관리자01</span>
+        </header>
+        <div class="cont_main">
+            <div class="tabs">
+                <ul class="nav">
+                    <li data-tab="tab1">
+                        <span>대시보드</span>
+                        <img src="./img/menu_ico01_active.png">
+                    </li>
+                    <li data-tab="tab2">
+                        <span>템플릿 관리</span><img src="./img/menu_ico02.png">
+                    </li>
+                    <li data-tab="tab3">
+                        <span>스토리보드 관리</span><img src="./img/menu_ico03.png">
+                    </li>
+                    <li data-tab="tab4">
+                        <span>수신기 관리</span><img src="./img/menu_ico04.png">
+                    </li>
+                    <li data-tab="tab5">
+                        <span>지점관리</span><img src="./img/menu_ico05.png">
+                    </li>
+                    <li data-tab="tab6">
+                        <span>그룹 관리</span><img src="./img/menu_ico06.png">
+                    </li>
+                    <li data-tab="tab7" class="active">
+                        <span>운영관리</span><img src="./img/menu_ico07_active.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="containers">
+                <div id="tab7" class="box_wrap tab-content active">
+                    <div class="box_right box">
+
+                        <div class="tabs_depth2 mb-6">
+                            <ul class="flex">
+                                <li data-tab="tab01" class="active">휴일관리</li>
+                                <li data-tab="tab02">대시보드</li>
+                                <li data-tab="tab03">운영자 관리</li>
+                                <li data-tab="tab04">환율정보관리</li>
+                            </ul>
+                        </div>
+
+                        <!-- 탭02 콘텐츠 -->
+                        <div class="tab-content2 active" id="tab01">
+
+                            <ul class="list_wrap">
+                                <li>
+                                    <h4 class="li_list">ID</h4>
+                                    <span>100</span>
+                                </li>
+                                <li>
+                                    <h4 class="li_list">휴일일자 </h4>
+                                    <span class="date_row">
+                                        <div class="date_wrap">
+                                            <input type="text" id="date-input" readonly placeholder="날짜를 선택하세요">
+                                            <img src="./img/date_ico.png" class="date_ico">
+                                        </div>
+                                        
+
+                                        <div class="date-picker" style="display: none;">
+                                            <div class="calendar-header">
+                                                <button class="prev-month"><img src="./img/cal_arrow_left.png"></button>
+                                                <div class="current-month"></div>
+                                                <button class="next-month"><img src="./img/cal_arrow_right.png"></button>
+                                            </div>
+                                            <div class="calendar-body">
+                                                <div class="day-names">
+                                                    <div>일</div>
+                                                    <div>월</div>
+                                                    <div>화</div>
+                                                    <div>수</div>
+                                                    <div>목</div>
+                                                    <div>금</div>
+                                                    <div>토</div>
+                                                </div>
+                                                <div class="days"></div>
+                                            </div>
+                                        </div>
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <h4 class="li_list">휴일명 </h4>
+                                    <span><input type="text" value="부처님오신날"></span>
+                                </li>
+                                <li>
+                                    <h4 class="li_list">제외 그룹</h4>
+                                    <span><input type="text" value="없음"></span>
+                                </li>                                
+                            </ul>
+                            <div class="btn_wrap justify-center bottom_btn_wrap">
+                                <div class="flex gap-2 justify-center">
+                                    <button class="bottom_btn">취소</button>
+                                    <button class="bottom_btn edit">저장</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-content2" id="tab02">
+                            <p>대시보드 내용</p>
+                        </div>
+                        <div class="tab-content2" id="tab03">
+                            <p>템플릿 관리 내용</p>
+                        </div>
+                        <div class="tab-content2" id="tab04">
+                            <p>스토리보드 관리 내용</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/core.js"></script>
+    <script>
+        $(document).ready(function() {
+    var today = new Date();
+    var currentMonth = today.getMonth();
+    var currentYear = today.getFullYear();
+    var monthNames = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+
+    function renderCalendar(month, year) {
+        $('.current-month').text(year + '.' + monthNames[month]);
+        $('.days').empty();
+
+        var firstDay = new Date(year, month).getDay();
+        var daysInMonth = 32 - new Date(year, month, 32).getDate();
+
+        for (var i = 0; i < firstDay; i++) {
+            $('.days').append('<div></div>');
+        }
+
+        for (var i = 1; i <= daysInMonth; i++) {
+            var date = new Date(year, month, i);
+            var day = date.getDay();
+            var dayClass = day === 0 ? 'sunday' : ''; // 일요일에만 'sunday' 클래스 추가
+            $('.days').append('<div class="' + dayClass + '">' + i + '</div>');
+        }
+
+        $('.days div').click(function() {
+            var day = $(this).text();
+            var selectedDate = year + '-' + (month + 1).toString().padStart(2, '0') + '-' + day.padStart(2, '0');
+            $('#date-input').val(selectedDate);
+            $('.date-picker').hide();
+        });
+    }
+
+    $('.prev-month').click(function() {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        renderCalendar(currentMonth, currentYear);
+    });
+
+    $('.next-month').click(function() {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        renderCalendar(currentMonth, currentYear);
+    });
+
+    $('#date-input').click(function() {
+        $('.date-picker').toggle();
+    });
+
+    $(document).click(function(event) {
+        if (!$(event.target).closest('#date-input, .date-picker').length) {
+            $('.date-picker').hide();
+        }
+    });
+
+    renderCalendar(currentMonth, currentYear);
+});
+    </script>
+
+</body>
+
+</html>

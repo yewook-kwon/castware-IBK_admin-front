@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-운영관리-휴일관리</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+
+<body>
+
+    <div id="wrap2">
+        <div class="black-bg">
+            <div class="layerpop_wrap">
+                <div class="layer-body">
+                    <p>
+                        기존 스토리보드 선택 정보를<br>
+                        <span class="point">현재 선택 그룹 정보로 변경</span>하시겠습니까?
+                    </p>
+                </div>
+                <div class="layer-btn">
+                    <button class="btn-cancle btn">취소</button>
+                    <button class="btn-primary btn">확인</button>
+                </div>
+            </div>
+        </div>
+        <header id="header">
+            <span class="admin">관리자01</span>
+        </header>
+        <div class="cont_main">
+            <div class="tabs">
+                <ul class="nav">
+                    <li data-tab="tab1">
+                        <span>대시보드</span>
+                        <img src="./img/menu_ico01_active.png">
+                    </li>
+                    <li data-tab="tab2">
+                        <span>템플릿 관리</span><img src="./img/menu_ico02.png">
+                    </li>
+                    <li data-tab="tab3">
+                        <span>스토리보드 관리</span><img src="./img/menu_ico03.png">
+                    </li>
+                    <li data-tab="tab4">
+                        <span>수신기 관리</span><img src="./img/menu_ico04.png">
+                    </li>
+                    <li data-tab="tab5">
+                        <span>지점관리</span><img src="./img/menu_ico05.png">
+                    </li>
+                    <li data-tab="tab6">
+                        <span>그룹 관리</span><img src="./img/menu_ico06.png">
+                    </li>
+                    <li data-tab="tab7" class="active">
+                        <span>운영관리</span><img src="./img/menu_ico07_active.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="containers">
+                <div id="tab7" class="box_wrap tab-content active">
+                    <div class="box_right box">
+
+                        <div class="tabs_depth2 mb-6">
+                            <ul class="flex">
+                                <li data-tab="tab01" class="active">휴일관리</li>
+                                <li data-tab="tab02">대시보드</li>
+                                <li data-tab="tab03">운영자 관리</li>
+                                <li data-tab="tab04">환율정보관리</li>
+                            </ul>
+                        </div>
+
+                        <!-- 탭02 콘텐츠 -->
+                        <div class="tab-content2 active" id="tab01">
+                            <div class="flex gap-10">
+                                <div class="calendar">
+                                    <div class="calendar-header">
+                                        <button class="prev-month"><img src="./img/cal_arrow_left.png"></button>
+                                        <div class="current-month"></div>
+                                        <button class="next-month"><img src="./img/cal_arrow_right.png"></button>
+                                    </div>
+                                    <div class="calendar-body">
+                                        <div class="day-names">
+                                            <div class="sun">일</div>
+                                            <div>월</div>
+                                            <div>화</div>
+                                            <div>수</div>
+                                            <div>목</div>
+                                            <div>금</div>
+                                            <div>토</div>
+                                        </div>
+                                        <div class="days mt-6"></div>
+                                    </div>
+                                </div>
+                                <div class="table-reposive cal_layout">
+                                    <table class="tbl_type01">
+                                        <thead>
+                                            <tr>
+                                                <th>선택</th>
+                                                <th>ID</th>
+                                                <th>휴일일자</th>
+                                                <th>휴일명</th>
+                                                <th>제외그룹</th>
+                                                <th>수정</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="check_wrap tbl">
+                                                        <input id="right12" type="checkbox" name="check">
+                                                        <label for="right12"></label>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>2024-05-15</td>
+                                                <td>부처님오신날</td>
+                                                <td>없음</td>
+                                                <td><button type="button" class="tbl_btn">수정</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="check_wrap tbl">
+                                                        <input id="right12" type="checkbox" name="check">
+                                                        <label for="right12"></label>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>2024-05-15</td>
+                                                <td>부처님오신날</td>
+                                                <td>없음</td>
+                                                <td><button type="button" class="tbl_btn">수정</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="check_wrap tbl">
+                                                        <input id="right12" type="checkbox" name="check">
+                                                        <label for="right12"></label>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>2024-05-15</td>
+                                                <td>부처님오신날</td>
+                                                <td>없음</td>
+                                                <td><button type="button" class="tbl_btn">수정</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="check_wrap tbl">
+                                                        <input id="right12" type="checkbox" name="check">
+                                                        <label for="right12"></label>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>2024-05-15</td>
+                                                <td>부처님오신날</td>
+                                                <td>없음</td>
+                                                <td><button type="button" class="tbl_btn">수정</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="check_wrap tbl">
+                                                        <input id="right12" type="checkbox" name="check">
+                                                        <label for="right12"></label>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>2024-05-15</td>
+                                                <td>부처님오신날</td>
+                                                <td>없음</td>
+                                                <td><button type="button" class="tbl_btn">수정</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="check_wrap tbl">
+                                                        <input id="right12" type="checkbox" name="check">
+                                                        <label for="right12"></label>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>2024-05-15</td>
+                                                <td>부처님오신날</td>
+                                                <td>없음</td>
+                                                <td><button type="button" class="tbl_btn">수정</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="check_wrap tbl">
+                                                        <input id="right12" type="checkbox" name="check">
+                                                        <label for="right12"></label>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>2024-05-15</td>
+                                                <td>부처님오신날</td>
+                                                <td>없음</td>
+                                                <td><button type="button" class="tbl_btn">수정</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="check_wrap tbl">
+                                                        <input id="right12" type="checkbox" name="check">
+                                                        <label for="right12"></label>
+                                                    </div>
+                                                </td>
+                                                <td>100</td>
+                                                <td>2024-05-15</td>
+                                                <td>부처님오신날</td>
+                                                <td>없음</td>
+                                                <td><button type="button" class="tbl_btn">수정</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="btn_wrap justify-between mt-10">
+                                <button class="del_btn">닫기</button>
+
+                                <ul class="page-navigation">
+                                    <li><a href="#">
+                                            <img src="./img/left2_ico.png">
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <img src="./img/left_ico.png">
+                                        </a>
+                                    </li>
+                                    <li><a href="#" class="active">
+                                            1
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            2
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            3
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            4
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            5
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <img src="./img/right_ico.png">
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <img src="./img/right2_ico.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <button class="reg_btn">
+                                    <a href="#" target="_blank">휴일 등록</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-content2" id="tab02">
+                            <p>대시보드 내용</p>
+                        </div>
+                        <div class="tab-content2" id="tab03">
+                            <p>템플릿 관리 내용</p>
+                        </div>
+                        <div class="tab-content2" id="tab04">
+                            <p>스토리보드 관리 내용</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/core.js"></script>
+
+</body>
+
+</html>

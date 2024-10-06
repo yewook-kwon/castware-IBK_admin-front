@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-수신기-등록</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div id="wrap2">
+
+        <header id="header">
+            <span class="admin">관리자01</span>
+        </header>
+        <div class="cont_main">
+            <div class="tabs">
+                <ul class="nav">
+                    <li data-tab="tab1" >
+                        <span>대시보드</span>
+                        <img src="./img/menu_ico01_active.png">
+                    </li>
+                    <li data-tab="tab2" >
+                        <span>템플릿 관리</span><img src="./img/menu_ico02.png">
+                    </li>
+                    <li data-tab="tab3">
+                        <span>스토리보드 관리</span><img src="./img/menu_ico03.png">
+                    </li>
+                    <li data-tab="tab4" class="active">
+                        <span>수신기 관리</span><img src="./img/menu_ico04_active.png">
+                    </li>
+                    <li data-tab="tab5">
+                        <span>지점관리</span><img src="./img/menu_ico05.png">
+                    </li>
+                    <li data-tab="tab6">
+                        <span>그룹 관리</span><img src="./img/menu_ico06.png">
+                    </li>
+                    <li data-tab="tab7">
+                        <span>운영관리</span><img src="./img/menu_ico07.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="containers">
+                
+                <div id="tab4" class="box_wrap tab-content active">
+                    <div class="box_right box relative">
+                        <ul class="list_wrap grid grid-cols-2">
+                            <li>
+                                <h4 class="li_list">ID</h4>
+                                <span>STB001</span>
+                            </li>
+                            
+                            <li>
+                                <h4 class="li_list">이름</h4>
+                                <span><input type="text" value="1.2.3.4"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">IP</h4>
+                                <span><input type="text" value="AA-BB-CC-DD-EE-FF"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">MAC ADDRESS 1</h4>
+                                <span><input type="text" value="AA-BB-CC-DD-EE-FF"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">MAC ADDRESS 2</h4>
+                                <span><input type="text" value="AA-BB-CC-DD-EE-FF"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">일련번호</h4>
+                                <span><input type="text" value="1.2.3.4"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">지점정보</h4>
+                                <span><input type="text" value="중곡동점"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">그룹 정보</h4>
+                                <span><input type="text" value="영업점A그룹"></span>
+                            </li>
+                            <li>
+                                <h4 class="li_list">상태</h4>
+                                <span>
+                                    <div class="sel_box_wrap">
+                                        <span class="sel_box">정상</span>
+                                        <ul class="sel_list" style="display: none;">
+                                            <li>정상</li>
+                                            <li>비정상</li>
+                                        </ul>
+                                    </div>
+                                </span>
+                            </li>
+                                                     
+                        </ul>
+                        
+                        <div class="flex gap-2 justify-center bottom_btn_wrap">
+                            <button class="bottom_btn">취소</button>
+                            <button class="bottom_btn edit">저장</button>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/core.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-운영관리-휴일관리-그룹선택</title>
+
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+    <div id="wrap2">
+        <div class="black-bg">
+            <div class="layerpop_wrap">
+                <div class="layer-body">
+                    <p>
+                        기존 스토리보드 선택 정보를<br>
+                        <span class="point">현재 선택 그룹 정보로 변경</span>하시겠습니까?
+                    </p>
+                </div>
+                <div class="layer-btn">
+                    <button class="btn-cancle btn">취소</button>
+                    <button class="btn-primary btn">확인</button>
+                </div>
+            </div>
+        </div>
+        <header id="header">
+            <span class="admin">관리자01</span>
+        </header>
+        <div class="cont_main">
+            <div class="tabs">
+                <ul class="nav">
+                    <li data-tab="tab1">
+                        <span>대시보드</span>
+                        <img src="./img/menu_ico01_active.png">
+                    </li>
+                    <li data-tab="tab2">
+                        <span>템플릿 관리</span><img src="./img/menu_ico02.png">
+                    </li>
+                    <li data-tab="tab3">
+                        <span>스토리보드 관리</span><img src="./img/menu_ico03.png">
+                    </li>
+                    <li data-tab="tab4">
+                        <span>수신기 관리</span><img src="./img/menu_ico04.png">
+                    </li>
+                    <li data-tab="tab5">
+                        <span>지점관리</span><img src="./img/menu_ico05.png">
+                    </li>
+                    <li data-tab="tab6">
+                        <span>그룹 관리</span><img src="./img/menu_ico06.png">
+                    </li>
+                    <li data-tab="tab7" class="active">
+                        <span>운영관리</span><img src="./img/menu_ico07_active.png">
+                    </li>
+                </ul>
+            </div>
+            <div class="containers">
+                <div id="tab7" class="box_wrap tab-content active">
+                    <div class="box_right box">
+
+                        <div class="tabs_depth2 mb-6">
+                            <ul class="flex">
+                                <li data-tab="tab01" class="active">휴일관리</li>
+                                <li data-tab="tab02">업무시간 관리</li>
+                                <li data-tab="tab03">운영자 관리</li>
+                                <li data-tab="tab04">환율정보관리</li>
+                            </ul>
+                        </div>
+
+                        <!-- 탭02 콘텐츠 -->
+                        <div class="tab-content2 active" id="tab01">
+
+                            <div class="flex justify-between">
+                                <h3 class="cont_tit">그룹 선택</h3>
+                                <form class="search_wrap">
+                                    <ul>
+                                        <li>
+                                            <span>사용</span>
+                                            <div class="sel_box_wrap">
+                                                <span class="sel_box">전체</span>
+                                                <ul class="sel_list" style="display: none;">
+                                                    <li>전체</li>
+                                                    <li>옵션</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <input class="search_input" type="search" placeholder="검색어를 입력해주세요">
+                                            <button type="submit" class="search_btn">검색</button>
+                                        </li>
+                                    </ul>
+                                </form>
+                            </div>
+
+                            <div class="table-reposive right">
+                                <table class="tbl_type01">
+                                    <thead>
+                                        <tr>
+                                            <th>선택</th>
+                                            <th>ID</th>
+                                            <th>이름</th>
+                                            <th>영업점 숫자</th>
+                                            <th>스토리보드</th>
+                                            <th>사용여부</th>
+                                            <th>등록일자</th>
+                                            <th>수정</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="right12" type="checkbox" name="check">
+                                                    <label for="right12"></label>
+                                                </div>
+                                            </td>
+                                            <td>GROUP001</td>
+                                            <td>영업점A그룹</td>
+                                            <td>200</td>
+                                            <td>영업점 기본 스토리보드</td>
+                                            <td>사용</td>
+                                            <td>20240507 16:10</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="right12" type="checkbox" name="check">
+                                                    <label for="right12"></label>
+                                                </div>
+                                            </td>
+                                            <td>GROUP001</td>
+                                            <td>영업점A그룹</td>
+                                            <td>200</td>
+                                            <td>영업점 기본 스토리보드</td>
+                                            <td>사용</td>
+                                            <td>20240507 16:10</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="right12" type="checkbox" name="check">
+                                                    <label for="right12"></label>
+                                                </div>
+                                            </td>
+                                            <td>GROUP001</td>
+                                            <td>영업점A그룹</td>
+                                            <td>200</td>
+                                            <td>영업점 기본 스토리보드</td>
+                                            <td>사용</td>
+                                            <td>20240507 16:10</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="right12" type="checkbox" name="check">
+                                                    <label for="right12"></label>
+                                                </div>
+                                            </td>
+                                            <td>GROUP001</td>
+                                            <td>영업점A그룹</td>
+                                            <td>200</td>
+                                            <td>영업점 기본 스토리보드</td>
+                                            <td>사용</td>
+                                            <td>20240507 16:10</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="right12" type="checkbox" name="check">
+                                                    <label for="right12"></label>
+                                                </div>
+                                            </td>
+                                            <td>GROUP001</td>
+                                            <td>영업점A그룹</td>
+                                            <td>200</td>
+                                            <td>영업점 기본 스토리보드</td>
+                                            <td>사용</td>
+                                            <td>20240507 16:10</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="right12" type="checkbox" name="check">
+                                                    <label for="right12"></label>
+                                                </div>
+                                            </td>
+                                            <td>GROUP001</td>
+                                            <td>영업점A그룹</td>
+                                            <td>200</td>
+                                            <td>영업점 기본 스토리보드</td>
+                                            <td>사용</td>
+                                            <td>20240507 16:10</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="right12" type="checkbox" name="check">
+                                                    <label for="right12"></label>
+                                                </div>
+                                            </td>
+                                            <td>GROUP001</td>
+                                            <td>영업점A그룹</td>
+                                            <td>200</td>
+                                            <td>영업점 기본 스토리보드</td>
+                                            <td>사용</td>
+                                            <td>20240507 16:10</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="right12" type="checkbox" name="check">
+                                                    <label for="right12"></label>
+                                                </div>
+                                            </td>
+                                            <td>GROUP001</td>
+                                            <td>영업점A그룹</td>
+                                            <td>200</td>
+                                            <td>영업점 기본 스토리보드</td>
+                                            <td>사용</td>
+                                            <td>20240507 16:10</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="btn_wrap mt-6 justify-center gap-2">
+                                <button class="bottom_btn">취소</button>
+                                <button class="bottom_btn edit">적용</button>
+                            </div>
+
+                        </div>
+                        <div class="tab-content2" id="tab02">
+                            <div class="table-reposive oper_layout">
+                                <table class="tbl_type01">
+                                    <thead>
+                                        <tr>
+                                            <th>선택</th>
+                                            <th>ID</th>
+                                            <th>운영시간명</th>
+                                            <th>운영일</th>
+                                            <th>운영시간</th>
+                                            <th>적용그룹</th>                                            
+                                            <th>수정</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="1" type="checkbox" name="check">
+                                                    <label for="1"></label>
+                                                </div>
+                                            </td>
+                                            <td>4</td>
+                                            <td>토요일 운영</td>
+                                            <td>월화수목금토</td>
+                                            <td>09:00~16:00</td>
+                                            <td>없음</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="1" type="checkbox" name="check">
+                                                    <label for="1"></label>
+                                                </div>
+                                            </td>
+                                            <td>4</td>
+                                            <td>토요일 운영</td>
+                                            <td>월화수목금토</td>
+                                            <td>09:00~16:00</td>
+                                            <td>없음</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="1" type="checkbox" name="check">
+                                                    <label for="1"></label>
+                                                </div>
+                                            </td>
+                                            <td>4</td>
+                                            <td>토요일 운영</td>
+                                            <td>월화수목금토</td>
+                                            <td>09:00~16:00</td>
+                                            <td>없음</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="1" type="checkbox" name="check">
+                                                    <label for="1"></label>
+                                                </div>
+                                            </td>
+                                            <td>4</td>
+                                            <td>토요일 운영</td>
+                                            <td>월화수목금토</td>
+                                            <td>09:00~16:00</td>
+                                            <td>없음</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="1" type="checkbox" name="check">
+                                                    <label for="1"></label>
+                                                </div>
+                                            </td>
+                                            <td>4</td>
+                                            <td>토요일 운영</td>
+                                            <td>월화수목금토</td>
+                                            <td>09:00~16:00</td>
+                                            <td>없음</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="1" type="checkbox" name="check">
+                                                    <label for="1"></label>
+                                                </div>
+                                            </td>
+                                            <td>4</td>
+                                            <td>토요일 운영</td>
+                                            <td>월화수목금토</td>
+                                            <td>09:00~16:00</td>
+                                            <td>없음</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="1" type="checkbox" name="check">
+                                                    <label for="1"></label>
+                                                </div>
+                                            </td>
+                                            <td>4</td>
+                                            <td>토요일 운영</td>
+                                            <td>월화수목금토</td>
+                                            <td>09:00~16:00</td>
+                                            <td>없음</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="1" type="checkbox" name="check">
+                                                    <label for="1"></label>
+                                                </div>
+                                            </td>
+                                            <td>4</td>
+                                            <td>토요일 운영</td>
+                                            <td>월화수목금토</td>
+                                            <td>09:00~16:00</td>
+                                            <td>없음</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="check_wrap tbl">
+                                                    <input id="1" type="checkbox" name="check">
+                                                    <label for="1"></label>
+                                                </div>
+                                            </td>
+                                            <td>4</td>
+                                            <td>토요일 운영</td>
+                                            <td>월화수목금토</td>
+                                            <td>09:00~16:00</td>
+                                            <td>없음</td>
+                                            <td>
+                                                <button type="button" class="tbl_btn">수정</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="btn_wrap justify-between">
+                                <button class="del_btn">삭제</button>
+
+                                <ul class="page-navigation">
+                                    <li><a href="#">
+                                            <img src="./img/left2_ico.png">
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <img src="./img/left_ico.png">
+                                        </a>
+                                    </li>
+                                    <li><a href="#" class="active">
+                                            1
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            2
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            3
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            4
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            5
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <img src="./img/right_ico.png">
+                                        </a>
+                                    </li>
+                                    <li><a href="#">
+                                            <img src="./img/right2_ico.png">
+                                        </a>
+                                    </li>
+                                </ul>
+                                <button class="reg_btn">
+                                    <a href="#" target="_blank">운영시간 등록</a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="tab-content2" id="tab03">
+                            <p>템플릿 관리 내용</p>
+                        </div>
+                        <div class="tab-content2" id="tab04">
+                            <p>스토리보드 관리 내용</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./js/core.js"></script>
+
+</body>
+
+</html>

@@ -1,3 +1,12 @@
+$('.layerpop2_wrap .layer_close').click(function(){
+  $('.black-bg2').css('display','none')
+})
+
+$('.btn_wrap .btn_cancle').click(function(){
+  $('.black-bg2').css('display','none')
+})
+
+
 $(".login_save").click(function () {
   $(this).toggleClass("active");
 });
@@ -319,3 +328,4 @@ document.querySelectorAll('th input[type="checkbox"]').forEach(headerCheckbox =>
       toggleCheckboxes(table, isChecked); // 전체 체크박스 토글
   });
 });
+

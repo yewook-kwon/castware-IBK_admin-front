@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>08-운영관리-휴일관리-운영시간관리</title>
+    <title>09-운영관리-휴일관리-운영시간관리</title>
 
     <link rel="stylesheet" href="./css/style.css" type="text/css" />
     <link rel="stylesheet" as="style" crossorigin
@@ -29,6 +29,115 @@
                     <button class="btn-cancle btn">취소</button>
                     <button class="btn-primary btn">확인</button>
                 </div>
+            </div>
+        </div>
+
+        <div class="black-bg2">
+            <div class="layerpop2_wrap">
+                <form class="layer-body">
+                    <div class="flex justify-between mb-10">
+                        <p class="layer_tit">기본 운영시간 수정</p>
+                        <img class="layer_close" src="./img/layer_close.png" alt="닫기" />
+                    </div>
+                    
+                    <div class="layer_info_box">
+                        <div class="layer_row">
+                            <label class="row_tit" for="layer_row02">ID</label>
+                            <input type="text" class="id" placeholder="20324-SSI" disabled>
+                        </div>
+                        <div class="layer_row">
+                            <label class="row_tit" for="layer_row02">업무시간명</label>
+                            <input type="text" class="id">
+                        </div>
+                        <div class="check_box">
+                            <ul class="box_top_check">
+                               
+                                <li>
+                                    <div class="check_wrap">
+                                        <input id="01" type="checkbox" name="group">
+                                        <label for="01">
+                                            <span>일요일</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check_wrap">
+                                        <input id="02" type="checkbox" name="group">
+                                        <label for="02">
+                                            <span>월요일</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check_wrap">
+                                        <input id="03" type="checkbox" name="group">
+                                        <label for="03">
+                                            <span>화요일</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check_wrap">
+                                        <input id="04" type="checkbox" name="group">
+                                        <label for="04">
+                                            <span>수요일</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check_wrap">
+                                        <input id="05" type="checkbox" name="group">
+                                        <label for="05">
+                                            <span>목요일</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check_wrap">
+                                        <input id="06" type="checkbox" name="group">
+                                        <label for="06">
+                                            <span>금요일</span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check_wrap">
+                                        <input id="07" type="checkbox" name="group">
+                                        <label for="07">
+                                            <span>토요일</span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="layer_row_col flex flex-col gap-5">
+                            <li class="layer_row">
+                                <label class="row_tit" for="layer_row02">점검 시작시간</label>
+                                <span>
+                                    <input type="time" class="time">
+                                </span>
+                            </li>
+                            <li class="layer_row">
+                                <label class="row_tit" for="layer_row02">업무 시작시간</label>
+                                <span>
+                                    <input type="time" class="time"> <span>~</span> <input class="time" type="time">
+                                </span>
+                            </li>
+                            <li class="layer_row">
+                                <label class="row_tit" for="layer_row02">수신기 재부팅</label>
+                                <span>
+                                    <input type="time" class="time">
+                                </span>
+                            </li>
+                        </div>
+                    </div>
+
+                    <div class="btn_wrap mt-16">
+                        <button class="btn_cancle" type="button">취 소</button>
+                        <button class="btn_save" type="submit">저 장</button>
+                    </div>                    
+                </form>
+
             </div>
         </div>
         <header id="header">

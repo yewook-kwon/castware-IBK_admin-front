@@ -216,25 +216,27 @@ $(document).ready(function () {
 
 // 테이블 리사이저
 // 컬럼 크기 저장 함수
-function saveColumnWidths(table) {
-  const headers = table.querySelectorAll("th");
-  const widths = Array.from(headers).map(th => th.style.width);
-  localStorage.setItem("columnWidths", JSON.stringify(widths)); // 컬럼 크기 저장
+function saveColumnWidths() {
+  const headers = document.querySelectorAll("th");
+  const widths = Array.from(headers).map(th => th.style.width || `${th.offsetWidth}px`); // px 단위로 너비 저장
+  localStorage.setItem("columnWidths", JSON.stringify(widths)); // localStorage에 저장
 }
 
 // 저장된 컬럼 크기 불러오기
-function loadColumnWidths(table) {
+function loadColumnWidths() {
   const widths = JSON.parse(localStorage.getItem("columnWidths"));
   if (widths) {
-    const headers = table.querySelectorAll("th");
+    const headers = document.querySelectorAll("th");
     headers.forEach((th, index) => {
-      th.style.width = widths[index];
+      if (widths[index]) {
+        th.style.width = widths[index]; // 저장된 너비를 다시 설정
+      }
     });
   }
 }
 
-// 컬럼 리사이징 코드
-document.querySelectorAll("th").forEach(function (th, index) {
+// 컬럼 리사이징 기능
+document.querySelectorAll("th").forEach(function (th) {
   const resizer = document.createElement("div");
   resizer.className = "resizer";
   th.appendChild(resizer);
@@ -251,19 +253,11 @@ document.querySelectorAll("th").forEach(function (th, index) {
 
   function resizeColumn(e) {
     const newWidth = startWidth + (e.pageX - startX);
-    th.style.width = newWidth + "px";
-
-    const table = th.closest("table");
-    const otherHeaders = Array.from(table.querySelectorAll("th")).filter(header => header !== th);
-    
-    otherHeaders.forEach(header => {
-      header.style.width = header.offsetWidth + "px";
-    });
+    th.style.width = newWidth + "px"; // 리사이즈된 너비 설정
   }
 
   function stopResize() {
-    const table = th.closest("table");
-    saveColumnWidths(table); // 컬럼 크기 저장
+    saveColumnWidths(); // 컬럼 크기 저장
     document.removeEventListener("mousemove", resizeColumn);
     document.removeEventListener("mouseup", stopResize);
   }
@@ -271,8 +265,7 @@ document.querySelectorAll("th").forEach(function (th, index) {
 
 // 페이지 로드 시 저장된 컬럼 크기 불러오기
 window.addEventListener("load", function () {
-  const table = document.querySelector("table");
-  loadColumnWidths(table); // 저장된 컬럼 크기 로드
+  loadColumnWidths(); // 저장된 컬럼 크기 불러오기
 });
 
 //테이블 내용 편집

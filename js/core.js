@@ -236,7 +236,7 @@ function loadColumnWidths() {
 }
 
 // 컬럼 리사이징 기능
-document.querySelectorAll("th").forEach(function (th) {
+document.querySelectorAll("th").forEach(function (th, thIndex) {
   const resizer = document.createElement("div");
   resizer.className = "resizer";
   th.appendChild(resizer);
@@ -253,7 +253,16 @@ document.querySelectorAll("th").forEach(function (th) {
 
   function resizeColumn(e) {
     const newWidth = startWidth + (e.pageX - startX);
-    th.style.width = newWidth + "px"; // 리사이즈된 너비 설정
+    const headers = document.querySelectorAll("th");
+
+    // 리사이징된 컬럼만 너비를 조정하고, 나머지 컬럼은 고정
+    headers.forEach((header, index) => {
+      if (index === thIndex) {
+        header.style.width = newWidth + "px"; // 리사이즈된 컬럼만 너비 설정
+      } else {
+        header.style.width = header.offsetWidth + "px"; // 나머지 컬럼 고정
+      }
+    });
   }
 
   function stopResize() {
@@ -267,6 +276,7 @@ document.querySelectorAll("th").forEach(function (th) {
 window.addEventListener("load", function () {
   loadColumnWidths(); // 저장된 컬럼 크기 불러오기
 });
+
 
 //테이블 내용 편집
 document.querySelectorAll("td.txt").forEach(function (cell) {

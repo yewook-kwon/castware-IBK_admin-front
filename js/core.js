@@ -233,6 +233,14 @@ document.querySelectorAll("th").forEach(function (th) {
   function resizeColumn(e) {
     const newWidth = startWidth + (e.pageX - startX);
     th.style.width = newWidth + "px";
+
+    // 나머지 컬럼의 너비를 고정하기 위해 추가
+    const table = th.closest("table");
+    const otherHeaders = Array.from(table.querySelectorAll("th")).filter(header => header !== th);
+    
+    otherHeaders.forEach(header => {
+      header.style.width = header.offsetWidth + "px"; // 기존 너비 유지
+    });
   }
 
   function stopResize() {
